@@ -88,9 +88,15 @@ void createNumbers(float* array){
 
 void* calculateSum(void* args){
 
-	// The block of this function is the block each thread executes and calculates the sum from 25000 numbers out of 10000. Four threads in total execute this block.
+	// The block of this function is the block each thread executes and calculates the sum from 25000 numbers out of 10000. Four threads in 
+	// total execute this block.
 
-	Args* arguments=(Args*) args; //In arguments pointer is saved the address of one out of four structs in array arguments (created in main). There are four structs created (one for each thread) and in each one is saved the appropriate information each thread has to use in order to calculate the sum of 25000 numbers out of 100000 and save this sum in the appropriate address in memory. This information is the start point in the initial array (its address is saved in start pointer) and the index pointer where is saved the address of the correct index of the array sums. The correct index is the one where the thread has to save its sum (the sum of 25000 numbers) in the array sums. (The array sums is the one where the 4 sums are saved in order to be calculated the total sum from the main thread) 
+	Args* arguments=(Args*) args; //In arguments pointer is saved the address of one out of four structs in array arguments (created in main). 
+	//There are four structs created (one for each thread) and in each one is saved the appropriate information each thread has to use in order 
+	//to calculate the sum of 25000 numbers out of 100000 and save this sum in the appropriate address in memory. This information is the start 
+	//point in the initial array (its address is saved in start pointer) and the index pointer where is saved the address of the correct index 
+	//of the array sums. The correct index is the one where the thread has to save its sum (the sum of 25000 numbers) in the array sums. 
+	//(The array sums is the one where the 4 sums are saved in order to be calculated the total sum from the main thread) 
 
 	float sum=0;
 	int start=*arguments->start;
