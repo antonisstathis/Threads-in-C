@@ -108,7 +108,8 @@ void* calculateSum(void* args){
 	
 	int index=*arguments->index;
 	//printf("\nindex=%d\n",index);
-	arguments->sums[index]=sum; // With the help of index variable we calculate here the address where the sum will be saved. This sum is the sum calculated from one out of four threads.
+	arguments->sums[index]=sum; // With the help of index variable we calculate here the address where the sum will be saved. This sum is the sum 
+	//calculated from one out of four threads.
 	//printf("\npointer=%p\n",&arguments->sums[index]);
 	//printf("sum=%f\n",arguments->sums[index]);
 
