@@ -7,7 +7,7 @@
 #define M 25000
 
 void createNumbers(float* array);
-void* calculateSum(void* args);
+void* produceSum(void* args);
 
 struct args {
 	float* array;
@@ -25,7 +25,7 @@ int main(int argc,char **argv){
 	int indexes[4];
 	Args arguments[4];
 	pthread_t threads[4];
-	createNumbers(array);
+	produceNumbers(array);
 	
 	int start=0;
 	for(int i=0;i<4;i++){
@@ -63,7 +63,7 @@ int main(int argc,char **argv){
 	return 0;
 }
 
-void createNumbers(float* array){
+void produceNumbers(float* array){
 
 	// The block of this function creates 100000 real numbers from 0 to 5 and saves them in an array created in main.
 
