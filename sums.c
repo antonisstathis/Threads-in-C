@@ -6,8 +6,8 @@
 #define N 100000 
 #define M 25000
 
-void createNumbers(float* array);
-void* produceSum(void* args);
+void produceNumbers(float* array);
+void* calculateSum(void* args);
 
 struct args {
 	float* array;
