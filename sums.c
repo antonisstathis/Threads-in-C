@@ -67,7 +67,7 @@ void createNumbers(float* array){
 
 	// The block of this function creates 100000 real numbers from 0 to 5 and saves them in an array created in main.
 
-	srand(228524);
+	srand(1462374);
 	float a=5.0;
 	for (int i=0;i<N;i++){
 		array[i]=(float)rand()/(float)(RAND_MAX)*a; //create random real number from 0 to 5 and save it in the array.
